@@ -7,7 +7,7 @@ namespace XenforoAPI
     {
         public Users(string url, string apiKey) : base(url, apiKey) { }
 
-        public async Task<string> GetUsers(int page = 0)
+        public async Task<string> GetUsersAsync(int page = 0)
         {
             return await GetRequestAsync($"{_baseURL}/api/users/?page={page}", _apiKey);
         }
