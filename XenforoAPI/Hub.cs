@@ -31,6 +31,11 @@ namespace XenforoAPI
             public Stats(string url, string apiKey) : base(url, apiKey) { }
         }
 
+        public partial class SearchForums : XenforoAPI.SearchForums
+        {
+            public SearchForums(string url, string apiKey) : base(url, apiKey) { }
+        }
+
         protected static async Task<string> GetRequestAsync(string url, string token, string user = "")
         {
             var header = new WebHeaderCollection
