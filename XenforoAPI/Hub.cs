@@ -26,6 +26,11 @@ namespace XenforoAPI
             public Threads(string url, string apiKey) : base(url, apiKey) { }
         }
 
+        public partial class Stats : XenforoAPI.Stats
+        {
+            public Stats(string url, string apiKey) : base(url, apiKey) { }
+        }
+
         protected static async Task<string> GetRequestAsync(string url, string token, string user = "")
         {
             var header = new WebHeaderCollection
